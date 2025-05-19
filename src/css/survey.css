@@ -1,0 +1,55 @@
+.survey-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fefefe;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.survey-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.survey-question {
+  margin-bottom: 1.2rem;
+}
+
+.survey-question label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+.survey-question input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.survey-question input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.response-preview {
+  margin-top: 2rem;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: monospace;
+  color: #222;
+}
+
+.response-preview pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

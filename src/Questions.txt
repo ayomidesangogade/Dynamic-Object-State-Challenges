@@ -1,0 +1,33 @@
+Dynamic Object State Challenges (React)
+1. Editable Profile Form
+Create a form that allows the user to update multiple profile fields (name, bio, location). Each field should update a single state object on change. Display the updated object live below the form.
+
+2. Dynamic Input Field Generator
+Start with a single input. Add a "New Field" button that appends a new input field dynamically. Each field’s name is its key in state. Typing in the field updates the matching key in the object.
+
+3. Toggle Permissions Panel
+Given an object like:
+{ read: false, write: false, delete: false },
+render toggle buttons or switches for each permission. Update the object in state when toggled.
+
+4. Real-Time Survey Response
+Build a form with dynamic questions (loaded from an array like [{id: "q1", question: "Your age?"}, {...}]). As a user types, store answers in an object like { q1: "23", q2: "Yes" }.
+
+5. Tag Manager
+Create a tag system where users enter a key and value (e.g. "category": "books"), and it gets added to the state object. Display the current tag list and allow deleting any tag by key.
+
+6. Multi-language Text Editor
+Maintain an object like { en: "", fr: "", es: "" } for a multi-language text input. Update only the current language value in the object when the user types.
+
+7. Settings Object from Checkboxes
+Generate checkboxes from an array of setting names (e.g. ["autoPlay", "sound", "darkMode"]). Track the toggled state in a settings object.
+
+8. Object Field Validator
+Create a form with multiple inputs. As a user types, validate each field (e.g. length, format) and store validation status in an object:
+{ email: true, username: false, password: true }
+
+9. Cart Object Updater
+Given an object like { "item1": 1, "item2": 3 } (item IDs as keys, quantity as values), build "+" and "−" buttons to update each quantity inside the object state.
+
+10. Dynamic Form Previewer
+Let users add fields with both key and value (e.g. "title": "Developer"). Display the resulting object as a live preview. Provide a reset button to clear all fields.

@@ -5,10 +5,12 @@ import Panel from "./solutions/PermissionsPanel"
 import TagManager from "./solutions/TagManager"
 import Settings from "./solutions/SettingsObject"
 import FieldValidator from "./solutions/ObjectFieldValidator"
+import CartUpdater from "./solutions/CartObjectUpdater"
+import DynamicForm from "./solutions/DynamicForm"
 
 function App() {
   return (
-    <FieldValidator />
+    <DynamicForm />
   )
 }
 

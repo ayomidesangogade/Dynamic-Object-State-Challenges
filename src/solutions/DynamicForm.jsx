@@ -3,24 +3,21 @@ import "../css/dynamic_form.css"
 
 function DynamicForm() {
     const [field, setField] = React.useState({})
-    const [form, setForm] = React.useState({key: "", value: ""})
 
-    function handleChange(event) {
-        const {name, value} = event.target
-
-        setForm(prevForm => (
-            {...prevForm, [name]:value}
-        ))
+    function handleReset() {
+        setField({})
     }
 
     function handleSubmit(event) {
-        event.preventDefault()  
-        const {newKey, newValue} = form
+        event.preventDefault()
+        const formData = new FormData(event.target)
+        const key = formData.get("key").trim()
+        const value = formData.get("value").trim()
 
         setField(prevField => (
-            {...prevField, [newKey]: newValue}
+            {...prevField, [key]: value}
         ))
-        // setForm({key: "", value: ""})
+        event.target.reset()
     }
 
     return (
@@ -33,21 +30,17 @@ function DynamicForm() {
                 name="key"
                 placeholder="Field Key (e.g. title)"
                 className="key-input"
-                value={form.key}
-                onChange={handleChange}
                 />
                 <input
                 type="text"
                 name="value"
                 placeholder="Field Value (e.g. Developer)"
                 className="value-input"
-                value={form.value}
-                onChange={handleChange}
                 />
                 <button type="submit" className="add-button">Add Field</button>
             </form>
 
-            <button className="reset-button">Reset</button>
+            <button className="reset-button" onClick={handleReset}>Reset</button>
 
             <div className="preview-output">
                 <h3>Preview Object:</h3>

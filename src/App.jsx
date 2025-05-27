@@ -7,10 +7,11 @@ import Settings from "./solutions/SettingsObject"
 import FieldValidator from "./solutions/ObjectFieldValidator"
 import CartUpdater from "./solutions/CartObjectUpdater"
 import DynamicForm from "./solutions/DynamicForm"
+import ProfileBuilder from "./solutions/ProfileBuilder"
 
 function App() {
   return (
-    <DynamicForm />
+    <ProfileBuilder />
   )
 }
 

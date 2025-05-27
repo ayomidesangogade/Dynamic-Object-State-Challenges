@@ -31,3 +31,28 @@ Given an object like { "item1": 1, "item2": 3 } (item IDs as keys, quantity as v
 
 10. Dynamic Form Previewer
 Let users add fields with both key and value (e.g. "title": "Developer"). Display the resulting object as a live preview. Provide a reset button to clear all fields.
+
+🧠 Final Challenge: Multi-Section Profile Builder
+Scenario:
+You're building a multi-section profile editor (think LinkedIn or GitHub). Users can fill out their personal info, skills, and social links. Your job is to manage all of this data in a single object-based state.
+
+✅ Requirements
+Manage a nested state object like:
+
+{
+  personal: { name: "", email: "", bio: "" },
+  skills: [],
+  social: { twitter: "", github: "", linkedin: "" }
+}
+Form sections:
+
+Personal Info: 3 inputs (name, email, bio)
+
+Skills: input + "Add Skill" button. Display each skill with a delete option.
+
+Social Links: 3 inputs (twitter, github, linkedin)
+
+Live Preview:
+Display the full profile object below the form in real time, formatted with JSON.stringify().
+
+Reset Button: Clears the entire form and state.
